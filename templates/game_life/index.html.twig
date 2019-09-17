@@ -1,10 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello GameLifeController!{% endblock %}
+{% block meta_title %}Game Of Life{% endblock %}
 
 {% block stylesheets %}
     {{ parent() }}
 {% endblock %}
+
+{% block title %}Game Of Life{% endblock %}
 
 {% block body %}
 <div class="container">
@@ -22,7 +24,7 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-auto p-3">
             <button class="btn btn-primary" onclick="window.gameOfLife.draw()">Create</button>
         </div>
@@ -33,10 +35,8 @@
             <button class="btn btn-danger" onclick="window.gameOfLife.stop()">Stop</button>
         </div>
     </div>
-    <div class="row">
-        <div class="col p-3">
-            <canvas id="game-of-life"></canvas>
-        </div>
+    <div class="row justify-content-center">
+        <canvas id="game-of-life" class="m-3"></canvas>
     </div>
 </div>
 {% endblock %}
