@@ -38,7 +38,7 @@ class GameOfLife {
                     this.ctx.fillRect (j * this.size, i * this.size, this.size, this.size);
                     this.arrFields[i][j] = 1;
                 } else {
-                    this.ctx.fillStyle = "black";
+                    this.ctx.strokeStyle = "black";
                     this.ctx.strokeRect(j * this.size, i * this.size, this.size, this.size);
                     this.arrFields[i][j] = 0;
                 }
@@ -57,7 +57,7 @@ class GameOfLife {
 
                     if (that.arrFields[i][j] && count !== 2 && count !== 3) {
                         that.ctx.clearRect(j * that.size, i * that.size, that.size, that.size);
-                        that.ctx.fillStyle = "black";
+                        that.ctx.strokeStyle = "black";
                         that.ctx.strokeRect (j * that.size, i * that.size, that.size, that.size);
                         tempArrFields[i][j] = 0;
                     } else if (!that.arrFields[i][j] && count === 3) {
@@ -131,7 +131,7 @@ class GameOfLife {
                     this.ctx.fillRect (j * this.size, i * this.size, this.size, this.size);
                     this.arrFields[i][j] = 1;
                 } else {
-                    this.ctx.fillStyle = "black";
+                    this.ctx.strokeStyle = "black";
                     this.ctx.strokeRect(j * this.size, i * this.size, this.size, this.size);
                     this.arrFields[i][j] = 0;
                 }
